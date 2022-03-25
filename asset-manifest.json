@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mernflix-reactfront-2022/static/css/main.af5b8f10.css",
+    "main.js": "/mernflix-reactfront-2022/static/js/main.d36e9cbd.js",
+    "static/js/787.570e9612.chunk.js": "/mernflix-reactfront-2022/static/js/787.570e9612.chunk.js",
+    "static/media/background_mernflixdark.png": "/mernflix-reactfront-2022/static/media/background_mernflixdark.49b205c1b7af85da78d1.png",
+    "index.html": "/mernflix-reactfront-2022/index.html",
+    "main.af5b8f10.css.map": "/mernflix-reactfront-2022/static/css/main.af5b8f10.css.map",
+    "main.d36e9cbd.js.map": "/mernflix-reactfront-2022/static/js/main.d36e9cbd.js.map",
+    "787.570e9612.chunk.js.map": "/mernflix-reactfront-2022/static/js/787.570e9612.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af5b8f10.css",
+    "static/js/main.d36e9cbd.js"
+  ]
+}
