@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Container, Badge, CardTitle } from 'reactstrap';
+import { Row, Col, Container, Badge, CardTitle, Spinner } from 'reactstrap';
 import { getAllMovies } from "../../utils/apicalls.js";
 
 import Header from '../Header.jsx';
 import CardMovie from './CardMovie.jsx';
 
-export default function MovieList(){
+export default function MovieList() {
 
   const [movies, setMovies] = useState(null);
 
@@ -15,38 +15,47 @@ export default function MovieList(){
     });
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     getMovies();
-  },[]);
- 
-  return movies === null ? 
+  }, []);
+
+
+
+  return movies === null ?
     (<div>
       <Row>
         <Col>
-          <Header/>
+          <Header />
         </Col>
       </Row>
-      <Row><h1 class="text-white">Loading...</h1></Row>
-    </div>) 
-    : (
-    <div>
       <Row>
-        <Col>
-          <Header/>
-        </Col>
-      </Row> 
-      <Container>
-        <CardTitle tag="center"><Badge pill color="dark">Total movies found: {movies.length}</Badge></CardTitle>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+        <Spinner color="light" />
+      </div>
+        {/* <Spinner animation="border" variant="light" size="lg">
+          <span >Loading...</span>
+        </Spinner> */}
+      </Row>
+    </div>)
+    : (
+      <div>
+        <Row>
+          <Col>
+            <Header />
+          </Col>
+        </Row>
+        <Container>
+          <CardTitle tag="center"><Badge pill color="dark">Total movies found: {movies.length}</Badge></CardTitle>
           <Row>
             {movies.map((movie) => {
-                return ( 
-                  <Col xs ="3" sm="3">
-                    <CardMovie movie={movie} /> 
-                  </Col>
-                )
+              return (
+                <Col xs="3" sm="3">
+                  <CardMovie movie={movie} />
+                </Col>
+              )
             })}
           </Row>
-      </Container>
-    </div>
-  );        
+        </Container>
+      </div>
+    );
 }
