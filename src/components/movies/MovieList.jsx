@@ -29,12 +29,9 @@ export default function MovieList() {
         </Col>
       </Row>
       <Row>
-      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-        <Spinner color="light" />
-      </div>
-        {/* <Spinner animation="border" variant="light" size="lg">
-          <span >Loading...</span>
-        </Spinner> */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <Spinner color="light" />
+        </div>
       </Row>
     </div>)
     : (
